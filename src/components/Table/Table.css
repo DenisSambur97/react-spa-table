@@ -1,0 +1,195 @@
+.table-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.table-input {
+    position: relative;
+    width: 631px;
+    height: 52px;
+    flex-shrink: 0;
+    background-color: #5a5c66;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 137.687%;
+    padding-left: 30px;
+    padding-right: 40px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='21' viewBox='0 0 21 21' fill='none'%3E%3Cg clip-path='url(%23clip0_16_77)'%3E%3Cpath d='M20.7353 19.4958L14.7101 13.4663C15.8979 12.0418 16.6124 10.2213 16.6124 8.23301C16.6124 3.69689 12.8896 0.00860596 8.31048 0.00860596C3.73132 0.00860596 0 3.70119 0 8.23731C0 12.7734 3.72272 16.4617 8.30187 16.4617C10.2472 16.4617 12.0375 15.7946 13.4577 14.68L19.5045 20.7267C19.8574 21.0796 20.3824 21.0796 20.7353 20.7267C21.0882 20.3738 21.0882 19.8487 20.7353 19.4958ZM1.76452 8.23731C1.76452 4.67383 4.69966 1.77743 8.30187 1.77743C11.9041 1.77743 14.8392 4.67383 14.8392 8.23731C14.8392 11.8008 11.9041 14.6972 8.30187 14.6972C4.69966 14.6972 1.76452 11.7965 1.76452 8.23731Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_16_77'%3E%3Crect width='21' height='21' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 655px center;
+    background-size: 16px;
+    border: none; /* Удаляем рамку у инпута */
+    outline: none; /* Удаляем контур при фокусе на инпуте */
+}
+
+.table-input::placeholder{
+    color: #B2B7BF
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: #FFF;
+    font-family: Roboto, serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 137.687%;
+}
+
+.table th,
+.table td {
+    padding: 30px 51px;
+    color: #474955;
+    border: 1px solid #E3E6EC;
+}
+
+.table th {
+    background-color: #474955;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    height: 12px;
+    position: relative;
+}
+
+.table th svg{
+    position: absolute;
+    top: 50%; /* Выравнивание иконки по вертикали на 50% */
+    transform: translateY(-50%); /* Коррекция вертикального положения иконки */
+    margin-left: 10px; /* Уменьшите отступ для иконки */
+}
+
+.table th:hover {
+    background-color: #3c3d43; /* Новый цвет фона при наведении на заголовки */
+}
+
+.table tr:hover {
+    background-color: #f5f5f5;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination-button {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    color: #474955;
+    font-family: Roboto, serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 137.687%; /* 33.045px */
+    background-color: white;
+}
+
+.pagination-button[disabled] {
+    background-color: #eaeaea;
+    cursor: not-allowed;
+}
+
+.pagination-pages {
+    display: flex;
+    color: #474955;
+    font-family: Roboto, serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 137.687%;
+    background: none;
+}
+
+.pagination a {
+    padding: 8px 12px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.pagination a:last-child {
+    margin-right: 0;
+}
+
+.pagination-pages a.active {
+    color: #7EBC3C;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    .table-input {
+        width: 90%;
+        background-position: 605px center;
+    }
+}
+
+@media (max-width: 690px) {
+    .table-input {
+        width: 70%;
+        background-position: 405px center;
+    }
+    .pagination-button {
+        color: #474955;
+        font-size: 16px;
+    }
+
+    .pagination-pages{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 580px) {
+    .table-input {
+        width: 50%;
+        background-position: 275px center;
+    }
+
+    .table th,
+    .table td {
+        padding: 30px 25px;
+    }
+
+    .pagination-button {
+        font-size: 14px;
+    }
+
+    .pagination-pages{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 540px) {
+    .table-input {
+        width: 50%;
+        background-position: 225px center;
+    }
+    .pagination a{
+        padding: 8px 6px;
+    }
+}
+
+@media (max-width: 460px) {
+    .table-input {
+        width: 50%;
+        background-position: 185px center;
+    }
+
+    .table th,
+    .table td {
+        padding: 30px 5px;
+    }
+
+    .pagination a{
+        padding: 8px 3px;
+    }
+}
